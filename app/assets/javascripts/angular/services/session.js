@@ -1,4 +1,4 @@
-angular.module('FantasyInsiders.services').service('Session',[ '$cookieStore', 'UserSession', 'UserRegistration', function($cookieStore, UserSession, UserRegistration) {
+angular.module('FantasyInsiders.services').service('Session',[ '$rootScope', '$cookieStore', 'UserSession', 'UserRegistration', function($rootScope, $cookieStore, UserSession, UserRegistration) {
   this.currentUser = $cookieStore.get('_fantasy_insiders_user');
   this.signedIn = !!$cookieStore.get('_fantasy_insiders_user');
   this.signedOut = !this.signedIn;
