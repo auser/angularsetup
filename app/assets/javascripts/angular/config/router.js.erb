@@ -1,0 +1,23 @@
+FantasyInsiders.config(function($stateProvider, $urlRouterProvider){
+      // For any unmatched url
+      $urlRouterProvider.otherwise('/login');
+
+      $stateProvider
+      /*
+      .state('default', {
+      	abstract: true,
+      	views: {
+      		"": {
+      				//controller: "ApplicationController",
+      				templateUrl: "templates/layouts/default.html.erb"
+      			}
+      		}
+      	})
+*/
+      .state('login', {
+      	url: '/login',
+      	templateUrl: 'login.index.html',
+      	controller: 'SessionsController'
+      });
+
+});
